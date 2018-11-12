@@ -4,7 +4,7 @@
 
 1. [Install node and npm](https://nodejs.org/en/download/)
 1. [Install GIT](https://git-scm.com/downloads)
-   > Restart PC
+   > Restart PC or logout / login
 1. Create empty direcotry
 1. Open your terminal and navigate to that directory
 1. then execute command `git clone git@bitbucket.org:coderslt/frontend.git`
