@@ -1,1 +1,1 @@
-document.write('Labas pasauli');
+document.write('Under construction');
