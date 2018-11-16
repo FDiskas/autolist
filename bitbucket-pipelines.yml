@@ -1,31 +1,36 @@
+image: aariacarterweir/lamp-gitftp:latest
+
 pipelines:
   custom: # Pipelines that are triggered manually via the Bitbucket GUI
     init: # -- First time init
-    - step:
-        caches:
-          - node
-        script:
-          - npm install
-          - git ftp init -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
+      - step:
+          caches:
+            - node
+          script:
+            - npm ci
+            - npm build
+            - git ftp init -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
     deploy-all: # -- Deploys all files from the selected commit
-    - step:
-        caches:
-          - node
-        script:
-          - npm install
-          - git ftp push -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST --all
+      - step:
+          caches:
+            - node
+          script:
+            - npm ci
+            - npm build
+            - git ftp push -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST --all
   branches: # Automated triggers on commits to branches
     master: # -- When committing to master branch
-    - step:
-        deployment: production
-        caches:
-          - node
-          - composer
-        script:
-          - npm install
-          - git ftp push -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
+      - step:
+          deployment: production
+          caches:
+            - node
+          script:
+            - npm ci
+            - npm build
+            - git ftp push -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
     develop: # -- When committing to developbranch
-        - step:
-            script:
-              - npm install
-              - git ftp push -u "$FTP_DEV_USERNAME" -p "$FTP_DEV_PASSWORD" ftp://$FTP_DEV_HOST
+      - step:
+          script:
+            - npm ci
+            - npm build
+            - git ftp push -u "$FTP_DEV_USERNAME" -p "$FTP_DEV_PASSWORD" ftp://$FTP_DEV_HOST
