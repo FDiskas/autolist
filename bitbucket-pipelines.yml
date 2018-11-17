@@ -57,4 +57,5 @@ pipelines:
           caches:
             - node
           script:
+            - npm run build
             - lftp -f "open $FTP_HOST user $FTP_USERNAME $FTP_PASSWORD lcd $BUILD_DIR mirror --reverse --delete --verbose $BUILD_DIR . bye"
