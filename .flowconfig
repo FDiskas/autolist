@@ -1,0 +1,17 @@
+[ignore]
+.*/node_modules/bower/.*
+.*/node_modules/config-chain/.*
+
+[include]
+
+[libs]
+.*/flow-typed/*
+
+[lints]
+
+[options]
+module.name_mapper='.*\.s?css$' -> 'css-module-flow'
+module.name_mapper='.*\.sass$' -> 'css-module-flow'
+include_warnings=true
+
+[strict]
