@@ -8,7 +8,7 @@ pipelines:
         caches:
           - node
         script:
-          - npm ci
+          - npm install
     - step:
         name: Build
         caches:
@@ -19,6 +19,7 @@ pipelines:
         name: Deploy to staging
         deployment: staging
         script:
+          - npm run build
           - lftp -c "open -e 'mirror --reverse --delete --verbose ./$BUILD_DIR/ .' $FTP_DEV_USERNAME:$FTP_DEV_PASSWORD@$FTP_DEV_HOST"
 
     master:
@@ -27,7 +28,7 @@ pipelines:
           caches:
             - node
           script:
-            - npm ci
+            - npm install
       - step:
           name: Build
           caches:
@@ -39,4 +40,5 @@ pipelines:
           deployment: production
           trigger: manual
           script:
+            - npm run build
             - lftp -c "open -e 'mirror --reverse --delete --verbose ./$BUILD_DIR/ .' $FTP_USERNAME:$FTP_PASSWORD@$FTP_HOST"
