@@ -1,4 +1,4 @@
-image: node:10
+image: codersakl/docker-alpine-gitftp:latest
 
 # pipelines:
 #   custom: # Pipelines that are triggered manually via the Bitbucket GUI
