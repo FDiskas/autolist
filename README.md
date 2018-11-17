@@ -4,6 +4,7 @@
 
 1. [Install node and npm](https://nodejs.org/en/download/)
 1. [Install GIT](https://git-scm.com/downloads)
+1. [Install GIT FLOW](https://danielkummer.github.io/git-flow-cheatsheet/)
    > Restart PC or logout / login
 1. Create empty direcotry
 1. Open your terminal and navigate to that directory
