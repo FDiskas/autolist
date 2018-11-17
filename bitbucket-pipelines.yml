@@ -52,7 +52,10 @@ pipelines:
             - node
           script:
             - npm run build
-          - step:
-              name: Deploy to production
-              script:
-                - lftp -f "open $FTP_HOST user $FTP_USERNAME $FTP_PASSWORD lcd $BUILD_DIR mirror --reverse --delete --verbose $BUILD_DIR . bye"
+      - step:
+          name: Deploy to production
+          caches:
+            - node
+          script:
+            - npm run build
+            - lftp -f "open $FTP_HOST user $FTP_USERNAME $FTP_PASSWORD lcd $BUILD_DIR mirror --reverse --delete --verbose $BUILD_DIR . bye"
