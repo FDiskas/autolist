@@ -2,6 +2,28 @@ image: codersakl/docker-alpine-gitftp:latest
 
 pipelines:
   branches:
+    develop:
+    - step:
+        name: Init
+        caches:
+          - node
+        script:
+          - npm ci
+    - step:
+        name: Build
+        caches:
+          - node
+          - $BUILD_DIR
+        script:
+          - npm run build
+    - step:
+        name: Deploy to staging
+        deployment: staging
+        caches:
+          - node
+        script:
+          - lftp -c "open -e 'mirror --reverse --delete --verbose ./$BUILD_DIR/ .' $FTP_DEV_USERNAME:$FTP_DEV_PASSWORD@$FTP_DEV_HOST"
+
     master:
       - step:
           name: Init
