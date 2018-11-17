@@ -1,38 +1,56 @@
-image: codersakl/docker-alpine-gitftp:latest
+image: node:10
+
+# pipelines:
+#   custom: # Pipelines that are triggered manually via the Bitbucket GUI
+#     init: # -- First time init
+#       - step:
+#           caches:
+#             - node
+#           script:
+#             - npm ci
+#             - npm run build
+#             - git config git-ftp.syncroot $BUILD_DIR/
+#             - git ftp push -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
+#             - git ftp init -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
+#     deploy-all: # -- Deploys all files from the selected commit
+#       - step:
+#           caches:
+#             - node
+#           script:
+#             - npm ci
+#             - npm run build
+#             - git ftp push -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST --all
+#   branches: # Automated triggers on commits to branches
+#     master: # -- When committing to master branch
+#       - step:
+#           deployment: production
+#           caches:
+#             - node
+#           script:
+#             - npm ci
+#             - npm run build
+#             - git ftp push -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
+#     develop: # -- When committing to developbranch
+#       - step:
+#           script:
+#             - npm ci
+#             - npm run build
+#             - git ftp push -u "$FTP_DEV_USERNAME" -p "$FTP_DEV_PASSWORD" ftp://$FTP_DEV_HOST
 
 pipelines:
-  custom: # Pipelines that are triggered manually via the Bitbucket GUI
-    init: # -- First time init
+  branches:
+    master:
       - step:
-          caches:
-            - node
-          script:
-            - npm ci
-            - npm run build
-            - git config git-ftp.syncroot $BUILD_DIR/
-            - git ftp push -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
-            - git ftp init -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
-    deploy-all: # -- Deploys all files from the selected commit
+        name: Init
+        caches:
+          - node
+        script:
+          - npm ci
       - step:
-          caches:
-            - node
-          script:
-            - npm ci
-            - npm run build
-            - git ftp push -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST --all
-  branches: # Automated triggers on commits to branches
-    master: # -- When committing to master branch
+        name: Build
+        script:
+          - npm run build
       - step:
-          deployment: production
-          caches:
-            - node
-          script:
-            - npm ci
-            - npm run build
-            - git ftp push -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
-    develop: # -- When committing to developbranch
-      - step:
-          script:
-            - npm ci
-            - npm run build
-            - git ftp push -u "$FTP_DEV_USERNAME" -p "$FTP_DEV_PASSWORD" ftp://$FTP_DEV_HOST
+        name: Deploy to production
+        script:
+          - lftp -f "open $FTP_HOST user $FTP_USERNAME $FTP_PASSWORD lcd $BUILD_DIR mirror --reverse --delete --verbose $BUILD_DIR . bye"
