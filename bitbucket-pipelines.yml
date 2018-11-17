@@ -18,8 +18,6 @@ pipelines:
     - step:
         name: Deploy to staging
         deployment: staging
-        caches:
-          - dist
         script:
           - lftp -c "open -e 'mirror --reverse --delete --verbose ./$BUILD_DIR/ .' $FTP_DEV_USERNAME:$FTP_DEV_PASSWORD@$FTP_DEV_HOST"
 
