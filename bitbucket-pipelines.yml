@@ -13,14 +13,14 @@ pipelines:
         name: Build
         caches:
           - node
-          - $BUILD_DIR
+          - dist
         script:
           - npm run build
     - step:
         name: Deploy to staging
         deployment: staging
         caches:
-          - node
+          - dist
         script:
           - lftp -c "open -e 'mirror --reverse --delete --verbose ./$BUILD_DIR/ .' $FTP_DEV_USERNAME:$FTP_DEV_PASSWORD@$FTP_DEV_HOST"
 
@@ -35,7 +35,7 @@ pipelines:
           name: Build
           caches:
             - node
-            - $BUILD_DIR
+            - dist
           script:
             - npm run build
       - step:
@@ -43,6 +43,10 @@ pipelines:
           deployment: production
           trigger: manual
           caches:
-            - node
+            - dist
           script:
             - lftp -c "open -e 'mirror --reverse --delete --verbose ./$BUILD_DIR/ .' $FTP_USERNAME:$FTP_PASSWORD@$FTP_HOST"
+
+definitions:
+  caches:
+    dist: ./$BUILD_DIR
