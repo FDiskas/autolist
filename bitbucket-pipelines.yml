@@ -9,8 +9,9 @@ pipelines:
           script:
             - npm ci
             - npm run build
-            - git config git-ftp.syncroot dist/
+            - git config git-ftp.syncroot $BUILD_DIR/
             - git ftp init -u "$FTP_USERNAME" -p "$FTP_PASSWORD" ftp://$FTP_HOST
+            - git ftp push
     deploy-all: # -- Deploys all files from the selected commit
       - step:
           caches:
