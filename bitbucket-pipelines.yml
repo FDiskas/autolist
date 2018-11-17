@@ -1,4 +1,4 @@
-image: aariacarterweir/lamp-gitftp:latest
+image: fgch/alpine-gitftp:latest
 
 pipelines:
   custom: # Pipelines that are triggered manually via the Bitbucket GUI
