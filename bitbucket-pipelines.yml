@@ -1,4 +1,4 @@
-image: fgch/alpine-gitftp:latest
+image: codersakl/docker-alpine-gitftp:latest
 
 pipelines:
   custom: # Pipelines that are triggered manually via the Bitbucket GUI
