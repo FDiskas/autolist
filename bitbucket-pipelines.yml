@@ -60,4 +60,4 @@ pipelines:
           script:
             - npm run build
             # - lftp -f "open $FTP_HOST user $FTP_USERNAME $FTP_PASSWORD mirror --reverse --delete --verbose ./$BUILD_DIR ./ bye"
-            - lftp -c 'open -u $FTP_USERNAME $FTP_PASSWORD -e "mirror --reverse --delete --verbose ./dist/ ." $FTP_USERNAME:$FTP_PASSWORD@$FTP_HOST'
+            - lftp -c 'open -e "mirror --reverse --delete --verbose ./dist/ ." $FTP_USERNAME:$FTP_PASSWORD@$FTP_HOST'
