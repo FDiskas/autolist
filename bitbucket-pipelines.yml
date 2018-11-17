@@ -41,16 +41,16 @@ pipelines:
   branches:
     master:
       - step:
-        name: Init
-        caches:
-          - node
-        script:
-          - npm ci
+          name: Init
+          caches:
+            - node
+          script:
+            - npm ci
       - step:
-        name: Build
-        script:
-          - npm run build
+          name: Build
+          script:
+            - npm run build
       - step:
-        name: Deploy to production
-        script:
-          - lftp -f "open $FTP_HOST user $FTP_USERNAME $FTP_PASSWORD lcd $BUILD_DIR mirror --reverse --delete --verbose $BUILD_DIR . bye"
+          name: Deploy to production
+          script:
+            - lftp -f "open $FTP_HOST user $FTP_USERNAME $FTP_PASSWORD lcd $BUILD_DIR mirror --reverse --delete --verbose $BUILD_DIR . bye"
