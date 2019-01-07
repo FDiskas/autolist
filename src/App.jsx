@@ -1,19 +1,24 @@
 // @flow
 
 import * as React from 'react';
+import { Route } from 'react-router4-with-layouts';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import './App.scss';
 
-// import { Navbar } from './components/navbar/';
-// import Article from './components/Article';
-// import Footer from './components/Footer';
-import { NavbarComponent } from './components/navbar/NavbarComponent';
-import { FooterComponent } from './components/footer/FooterComponent';
+import { LandingLayout } from './layouts/Landing/LandingLayout';
+import { LandingPage } from './pages/Landing/LandingPage';
+import { ListingLayout } from './layouts/Listing/ListingLayout';
+import { ListingPage } from './pages/Listing/ListingPage';
+import { ErrorPage } from './pages/Error/ErrorPage';
+import { EmptyLayout } from './layouts/Empty/EmptyLayout';
 
 export const App = () => (
-  <div>
-    <NavbarComponent />
-    <div className="container">Labas</div>
-    <FooterComponent />
-  </div>
+  <Router>
+    <Switch>
+      <Route exact path="/" component={LandingPage} layout={LandingLayout} />
+      <Route exact path="/list" component={ListingPage} layout={ListingLayout} />
+      <Route component={ErrorPage} layout={EmptyLayout} />
+    </Switch>
+  </Router>
 );

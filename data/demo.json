@@ -1,414 +1,452 @@
 ﻿{
-  "carlist": [
+  "autogidas": [
     {
-      "title": "BMW 650 Gran Coupe, 4.4 l., sedanas",
-      "Field2": "44 000 €",
-      "Time": "2014-03",
-      "Field4": "81 000 km",
-      "Field5": "4395 cm³, 449 AG (330kW)",
-      "Field6": "Benzinas",
-      "Field7": "Visi varantys (4х4)",
-      "Field8": "Automatinė"
+      "id": 30951532,
+      "title": "Opel Vectra Dyzelinas  1998 y. B",
+      "img": "https://img.autogidas.lt/4_16_133921684/opel-vectra-b-hecbekas-1998.jpg",
+      "price": "490 €",
+      "attributes": ["2.0 l.", "Diesel", "1998 m.", "Mechanical", "Hatchback", "Alytus"]
     },
     {
-      "title": "Skoda Octavia, 2.0 l., universalas",
-      "Field2": "3 500 € + mokesčiai",
-      "Time": "3 500 €",
-      "Field4": "2010-06",
-      "Field5": "2000 cm³, 140 AG (103kW)",
-      "Field6": "Dyzelinas",
-      "Field7": "Priekiniai",
-      "Field8": "Automatinė"
+      "id": 31281025,
+      "title": "Bmw 320 Dyzelinas  2004 y. E46 d Touring",
+      "img": "https://img.autogidas.lt/4_16_139839934/bmw-320-e46-d-touring-universalas-2004.jpg",
+      "price": "1 250 €",
+      "attributes": ["2.0 l.", "Diesel", "2004 m.", "Mechanical", "110 kW", "Wagon", "Kaunas"]
     },
     {
-      "title": "Citroen C5, 3.0 l., universalas",
-      "Field2": "6 300 €",
-      "Time": "6 300 €",
-      "Field4": "2011-11",
-      "Field5": "178 300 km",
-      "Field6": "2998 cm³, 240 AG (177kW)",
-      "Field7": "Dyzelinas",
-      "Field8": "Priekiniai"
+      "id": 31284631,
+      "title": "Opel Astra Dyzelinas  2005 y. II",
+      "img": "https://img.autogidas.lt/4_16_139911019/opel-astra-ii-hecbekas-2005.jpg",
+      "price": "1 599 €",
+      "attributes": [
+        "1.7 l.",
+        "Diesel",
+        "2005 m.",
+        "Mechanical",
+        "74 kW",
+        "237 000 km.",
+        "Hatchback",
+        "Siauliai"
+      ]
     },
     {
-      "title": "Volkswagen Phaeton, 4.2 l., limuzinas",
-      "Field2": "6 500 €",
-      "Time": "2003-05",
-      "Field4": "270 000 km",
-      "Field5": "4172 cm³, 334 AG (246kW)",
-      "Field6": "Benzinas",
-      "Field7": "Visi varantys (4х4)",
-      "Field8": "Automatinė"
-    },
-    {
-      "title": "Mercedes-Benz S63 AMG, 5.5 l., kupė (coupe)",
-      "Field2": "149 000 €",
-      "Time": "34 000 km",
-      "Field4": "5461 cm³, 730 AG (537kW)",
-      "Field5": "Benzinas",
-      "Field6": "Visi varantys (4х4)",
-      "Field7": "Automatinė",
-      "Field8": "Klimato kontrolė"
-    },
-    {
-      "title": "Toyota Prius, 1.8 l., hečbekas",
-      "Field2": "13 900 €",
-      "Time": "13 900 €",
-      "Field4": "2012-09",
-      "Field5": "130 000 km",
-      "Field6": "1798 cm³, 99 AG (73kW)",
-      "Field7": "Benzinas / elektra",
-      "Field8": "Priekiniai"
-    },
-    {
-      "title": "Nissan X-Trail, 2.2 l., visureigis",
-      "Field2": "3 250 €",
-      "Time": "2005",
-      "Field4": "2184 cm³, 135 AG (100kW)",
-      "Field5": "Dyzelinas",
-      "Field6": "Visi varantys (4х4)",
-      "Field7": "Mechaninė",
-      "Field8": "Kairėje"
-    },
-    {
-      "title": "Volvo XC90, 2.4 l., visureigis",
-      "Field2": "6 400 €",
-      "Time": "6 400 €",
-      "Field4": "2005-12",
-      "Field5": "280 000 km",
-      "Field6": "2401 cm³, 184 AG (136kW)",
-      "Field7": "Dyzelinas",
-      "Field8": "Visi varantys (4х4)"
-    },
-    {
-      "title": "BMW 530, 3.0 l., universalas",
-      "Field2": "6 600 €",
-      "Time": "2006-12",
-      "Field4": "3000 cm³, 217 AG (160kW)",
-      "Field5": "Benzinas / dujos",
-      "Field6": "Automatinė",
-      "Field7": "Kairėje",
-      "Field8": ""
-    },
-    {
-      "title": "BMW X3, visureigis",
-      "Field2": "6 900 €",
-      "Time": "2007-09",
-      "Field4": "217 AG (160kW)",
-      "Field5": "Dyzelinas",
-      "Field6": "Automatinė",
-      "Field7": "Oro kondicionierius",
-      "Field8": "Kairėje"
-    },
-    {
-      "title": "BMW 650 Gran Coupe, 4.4 l., sedanas",
-      "Field2": "44 000 €",
-      "Time": "2014-03",
-      "Field4": "81 000 km",
-      "Field5": "4395 cm³, 449 AG (330kW)",
-      "Field6": "Benzinas",
-      "Field7": "Visi varantys (4х4)",
-      "Field8": "Automatinė"
-    },
-    {
-      "title": "Skoda Octavia, 2.0 l., universalas",
-      "Field2": "3 500 €\n            \n                            + mokesčiai",
-      "Time": "3 500 €",
-      "Field4": "2010-06",
-      "Field5": "2000 cm³, 140 AG (103kW)",
-      "Field6": "Dyzelinas",
-      "Field7": "Priekiniai",
-      "Field8": "Automatinė"
-    },
-    {
-      "title": "Citroen C5, 3.0 l., universalas",
-      "Field2": "6 300 €",
-      "Time": "6 300 €",
-      "Field4": "2011-11",
-      "Field5": "178 300 km",
-      "Field6": "2998 cm³, 240 AG (177kW)",
-      "Field7": "Dyzelinas",
-      "Field8": "Priekiniai"
-    },
-    {
-      "title": "Volkswagen Phaeton, 4.2 l., limuzinas",
-      "Field2": "6 500 €",
-      "Time": "2003-05",
-      "Field4": "270 000 km",
-      "Field5": "4172 cm³, 334 AG (246kW)",
-      "Field6": "Benzinas",
-      "Field7": "Visi varantys (4х4)",
-      "Field8": "Automatinė"
-    },
-    {
-      "title": "Mercedes-Benz S63 AMG, 5.5 l., kupė (coupe)",
-      "Field2": "149 000 €",
-      "Time": "34 000 km",
-      "Field4": "5461 cm³, 730 AG (537kW)",
-      "Field5": "Benzinas",
-      "Field6": "Visi varantys (4х4)",
-      "Field7": "Automatinė",
-      "Field8": "Klimato kontrolė"
-    },
-    {
-      "title": "Toyota Prius, 1.8 l., hečbekas",
-      "Field2": "13 900 €",
-      "Time": "13 900 €",
-      "Field4": "2012-09",
-      "Field5": "130 000 km",
-      "Field6": "1798 cm³, 99 AG (73kW)",
-      "Field7": "Benzinas / elektra",
-      "Field8": "Priekiniai"
-    },
-    {
-      "title": "Nissan X-Trail, 2.2 l., visureigis",
-      "Field2": "3 250 €",
-      "Time": "2005",
-      "Field4": "2184 cm³, 135 AG (100kW)",
-      "Field5": "Dyzelinas",
-      "Field6": "Visi varantys (4х4)",
-      "Field7": "Mechaninė",
-      "Field8": "Kairėje"
-    },
-    {
-      "title": "Volvo XC90, 2.4 l., visureigis",
-      "Field2": "6 400 €",
-      "Time": "6 400 €",
-      "Field4": "2005-12",
-      "Field5": "280 000 km",
-      "Field6": "2401 cm³, 184 AG (136kW)",
-      "Field7": "Dyzelinas",
-      "Field8": "Visi varantys (4х4)"
-    },
-    {
-      "title": "BMW 530, 3.0 l., universalas",
-      "Field2": "6 600 €",
-      "Time": "2006-12",
-      "Field4": "3000 cm³, 217 AG (160kW)",
-      "Field5": "Benzinas / dujos",
-      "Field6": "Automatinė",
-      "Field7": "Kairėje",
-      "Field8": ""
-    },
-    {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_72736521/bmw-650-gran-coupe-4-4-l-sedanas-2014-benzinas.jpg",
-      "title": "BMW 650 Gran Coupe, 4.4 l., sedanas",
-      "price": "44 000 €",
-      "date": "2014-03",
-      "kuras": "Benzinas",
-      "gearbox": "Automatinė",
-      "engine": "330 kW",
-      "mileage": "81 000 km",
-      "city": "Vilnius"
-    },
-    {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_71234083/skoda-octavia-2-0-l-universalas-2010-dyzelinas.jpg",
-      "title": "Skoda Octavia, 2.0 l., universalas",
-      "price": "3 500 €",
-      "date": "2010-06",
-      "kuras": "Dyzelinas",
-      "gearbox": "Automatinė",
-      "engine": "103 kW",
-      "mileage": "Vilnius",
-      "city": ""
-    },
-    {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_67665711/citroen-c5-3-0-l-universalas-2011-dyzelinas.jpg",
-      "title": "Citroen C5, 3.0 l., universalas",
-      "price": "6 300 €",
-      "date": "2011-11",
-      "kuras": "Dyzelinas",
-      "gearbox": "Automatinė",
-      "engine": "177 kW",
-      "mileage": "178 300 km",
-      "city": "Marijampolė"
-    },
-    {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_70001085/volkswagen-phaeton-4-2-l-limuzinas-2003-benzinas.jpg",
-      "title": "Skubiai\n                        Volkswagen Phaeton, 4.2 l., limuzinas",
-      "price": "6 500 €",
-      "date": "2003-05",
-      "kuras": "Benzinas",
-      "gearbox": "Automatinė",
-      "engine": "246 kW",
-      "mileage": "270 000 km",
-      "city": "Vilnius"
-    },
-    {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_73535381/mercedes-benz-s63-amg-5-5-l-kupe-coupe-2016-benzinas.jpg",
-      "title": "Mercedes-Benz S63 AMG, 5.5 l., kupė (coupe)",
-      "price": "149 000 €",
-      "date": "2016-12",
-      "kuras": "Benzinas",
-      "gearbox": "Automatinė",
-      "engine": "537 kW",
-      "mileage": "34 000 km",
-      "city": "Klaipėda"
-    },
-    {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_73605615/opel-insignia-2-0-l-universalas-2009-dyzelinas.jpg",
-      "title": "Opel Insignia, 2.0 l., universalas",
-      "price": "4 800 €",
-      "date": "2009-10",
-      "kuras": "Dyzelinas",
-      "gearbox": "Mechaninė",
-      "engine": "118 kW",
-      "mileage": "173 000 km",
-      "city": "Panevėžys"
-    },
-    {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_72548969/toyota-prius-1-8-l-hecbekas-2012-benzinas-elektra.jpg",
-      "title": "Toyota Prius, 1.8 l., hečbekas",
-      "price": "13 900 €",
-      "date": "2012-09",
-      "kuras": "Benzinas / elektra",
-      "gearbox": "Automatinė",
-      "engine": "73 kW",
-      "mileage": "130 000 km",
-      "city": "Vilnius"
-    },
-    {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_73612837/bmw-330-3-0-l-sedanas-2002-dyzelinas.jpg",
-      "title": "BMW 330, 3.0 l., sedanas",
+      "id": 31227652,
+      "title": "Opel Astra Dyzelinas  2008 y. II",
+      "img": "https://img.autogidas.lt/4_16_138989587/opel-astra-ii-universalas-2008.jpg",
       "price": "2 550 €",
-      "date": "2002-07",
-      "kuras": "Dyzelinas",
-      "gearbox": "Automatinė",
-      "engine": "135 kW",
-      "mileage": "366 555 km",
-      "city": "Utena"
+      "attributes": [
+        "1.7 l.",
+        "Diesel",
+        "2008 m.",
+        "Mechanical",
+        "74 kW",
+        "242 000 km.",
+        "Wagon",
+        "Kaunas"
+      ]
     },
     {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_72950655/nissan-x-trail-2-2-l-visureigis-2005-dyzelinas.jpg",
-      "title": "Nissan X-Trail, 2.2 l., visureigis",
-      "price": "3 250 €",
-      "date": "2005",
-      "kuras": "Dyzelinas",
-      "gearbox": "Mechaninė",
-      "engine": "100 kW",
-      "mileage": "Kretinga",
-      "city": ""
+      "id": 31280704,
+      "title": "Hyundai Santa Fe Dyzelinas  2010 y. II",
+      "img": "https://img.autogidas.lt/4_16_139835818/hyundai-santa-fe-ii-visureigis-2010.jpg",
+      "price": "7 800 €",
+      "attributes": ["2.0 l.", "Diesel", "2010 m.", "Mechanical", "110 kW", "SUV", "Kaunas"]
     },
     {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_66765619/volkswagen-beetle-1-9-l-kabrioletas-2007-dyzelinas.jpg",
-      "title": "Volkswagen Beetle, 1.9 l., kabrioletas",
-      "price": "3 450 €",
-      "date": "2007-05",
-      "kuras": "Dyzelinas",
-      "gearbox": "Mechaninė",
-      "engine": "77 kW",
-      "mileage": "404 000 km",
-      "city": "Jonava"
+      "id": 31283446,
+      "title": "Chevrolet Camaro Benzinas  2012 y. Coupe",
+      "img": "https://img.autogidas.lt/4_16_139898773/chevrolet-camaro-coupe-2012.jpg",
+      "price": "15 800 €",
+      "attributes": [
+        "3.6 l.",
+        "Gasoline",
+        "2012 m.",
+        "Mechanical",
+        "12 596 km.",
+        "Coupe",
+        "Radviliskis"
+      ]
     },
     {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_73502075/toyota-prius-1-5-l-hecbekas-2005-benzinas-elektra.jpg",
-      "title": "Toyota Prius, 1.5 l., hečbekas",
-      "price": "3 950 €",
-      "date": "2005-09",
-      "kuras": "Benzinas / elektra",
-      "gearbox": "Automatinė",
-      "engine": "55 kW",
-      "mileage": "255 000 km",
-      "city": "Vilnius"
+      "id": 31245547,
+      "title": "Volkswagen Bora Dyzelinas  2002 y. Sedanas",
+      "img": "https://img.autogidas.lt/4_16_139339081/volkswagen-bora-sedanas-2002.jpg",
+      "price": "1 200 €",
+      "attributes": ["1.9 l.", "Diesel", "2002 m.", "Mechanical", "81 kW", "Sedan", "Vilnius"]
     },
     {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_72723899/audi-a4-2-7-l-universalas-2008-dyzelinas.jpg",
-      "title": "Audi A4, 2.7 l., universalas",
-      "price": "4 650 €",
-      "date": "2008-03",
-      "kuras": "Dyzelinas",
-      "gearbox": "Automatinė",
-      "engine": "132 kW",
-      "mileage": "Šiauliai",
-      "city": ""
+      "id": 31284667,
+      "title": "Mercedes-Benz C 200 Benzinas  2003 y. W203",
+      "img": "https://img.autogidas.lt/4_16_139911904/mercedes-benz-c-200-w203-hecbekas-2003.jpg",
+      "price": "1 550 €",
+      "attributes": [
+        "1.8 l.",
+        "Gasoline",
+        "2003 m.",
+        "Automatic",
+        "120 kW",
+        "Hatchback",
+        "Siauliai"
+      ]
     },
     {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_73609447/audi-a6-2-0-l-universalas-2007-dyzelinas.jpg",
-      "title": "Audi A6, 2.0 l., universalas",
-      "price": "5 000 €",
-      "date": "2007-05",
-      "kuras": "Dyzelinas",
-      "gearbox": "Automatinė",
-      "engine": "103 kW",
-      "mileage": "330 000 km",
-      "city": "Telšiai"
+      "id": 31285606,
+      "title": "Volkswagen Transporter Dyzelinas  1995 y. T4",
+      "img": "https://img.autogidas.lt/4_16_139919539/volkswagen-transporter-t4-krovininis-mikroautobusas-1995.jpg",
+      "price": "850 €",
+      "attributes": ["2.4 l.", "Diesel", "1995 m.", "Mechanical", "Heavy minibus", "Vilnius"]
     },
     {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_72853173/audi-a6-2-0-l-universalas-2006-dyzelinas.jpg",
-      "title": "Skubiai\n                        Audi A6, 2.0 l., universalas",
-      "price": "5 200 €",
-      "date": "2006-12",
-      "kuras": "Dyzelinas",
-      "gearbox": "Automatinė",
-      "engine": "103 kW",
-      "mileage": "297 000 km",
-      "city": "Kaunas"
+      "id": 31285678,
+      "title": "Honda Civic Dyzelinas  2004 y. VII",
+      "img": "https://img.autogidas.lt/4_16_139920259/honda-civic-vii-hecbekas-2004.jpg",
+      "price": "1 299 €",
+      "attributes": [
+        "1.7 l.",
+        "Diesel",
+        "2004 m.",
+        "Mechanical",
+        "74 kW",
+        "225 180 km.",
+        "Hatchback",
+        "Vilnius"
+      ]
     },
     {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_71577355/skoda-octavia-1-6-l-universalas-2011-dyzelinas.jpg",
-      "title": "Skoda Octavia, 1.6 l., universalas",
-      "price": "5 700 €",
-      "date": "2011-06",
-      "kuras": "Dyzelinas",
-      "gearbox": "Mechaninė",
-      "engine": "77 kW",
-      "mileage": "290 000 km",
-      "city": "Šiauliai"
+      "id": 31285297,
+      "title": "Opel Vectra Dyzelinas  2008 y. C CDTI Elegance",
+      "img": "https://img.autogidas.lt/4_16_139917019/opel-vectra-c-cdti-elegance-universalas-2008.jpg",
+      "price": "3 550 €",
+      "attributes": ["1.9 l.", "Diesel", "2008 m.", "Mechanical", "110 kW", "Wagon", "Kretinga"]
     },
     {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_73550779/volvo-xc90-2-4-l-visureigis-2005-dyzelinas.jpg",
-      "title": "Volvo XC90, 2.4 l., visureigis",
-      "price": "6 400 €",
-      "date": "2005-12",
-      "kuras": "Dyzelinas",
-      "gearbox": "Mechaninė",
-      "engine": "136 kW",
-      "mileage": "280 000 km",
-      "city": "Vilnius"
+      "id": 31283941,
+      "title": "Bmw 320 Benzinas  2005 y. E90",
+      "img": "https://img.autogidas.lt/4_16_139904341/bmw-320-e90-sedanas-2005.jpg",
+      "price": "3 600 €",
+      "attributes": [
+        "2.0 l.",
+        "Gasoline",
+        "2005 m.",
+        "Automatic",
+        "110 kW",
+        "185 000 km.",
+        "Sedan",
+        "Siauliai"
+      ]
     },
     {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_71590359/chrysler-300c-3-0-l-sedanas-2008-dyzelinas.jpg",
-      "title": "Chrysler 300C, 3.0 l., sedanas",
-      "price": "6 500 €",
-      "date": "2008-06",
-      "kuras": "Dyzelinas",
-      "gearbox": "Automatinė",
-      "engine": "160 kW",
-      "mileage": "315 000 km",
-      "city": "Vilnius"
+      "id": 31283104,
+      "title": "Volvo S40 Benzinas  2009 y. II",
+      "img": "https://img.autogidas.lt/4_16_139861714/volvo-s40-ii-sedanas-2009.jpg",
+      "price": "4 100 €",
+      "attributes": ["2.4 l.", "Gasoline", "2009 m.", "Automatic", "Sedan", "Mazeikiai"]
     },
     {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_70434139/bmw-530-3-0-l-universalas-2006-benzinas-dujos.jpg",
-      "title": "BMW 530, 3.0 l., universalas",
-      "price": "6 600 €",
-      "date": "2006-12",
-      "kuras": "Benzinas / dujos",
-      "gearbox": "Automatinė",
-      "engine": "160 kW",
-      "mileage": "Kretinga",
-      "city": ""
+      "id": 31285621,
+      "title": "Volkswagen Passat Dyzelinas  2000 y. B5",
+      "img": "https://img.autogidas.lt/4_16_139919707/volkswagen-passat-b5-sedanas-2000.jpg",
+      "price": "730 €",
+      "attributes": ["1.9 l.", "Diesel", "2000 m.", "Mechanical", "Sedan", "Vilnius"]
     },
     {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_71848869/skoda-superb-2-0-l-sedanas-2011-dyzelinas.jpg",
-      "title": "Skoda Superb, 2.0 l., sedanas",
-      "price": "6 650 €",
-      "date": "2011-02",
-      "kuras": "Dyzelinas",
-      "gearbox": "Mechaninė",
-      "engine": "103 kW",
-      "mileage": "244 000 km",
-      "city": "Šiauliai"
+      "id": 31286362,
+      "title": "Opel Zafira Dyzelinas  2000 y. A",
+      "img": "https://img.autogidas.lt/4_16_139926505/opel-zafira-a-vienaturis-2000.jpg",
+      "price": "900 €",
+      "attributes": ["2.0 l.", "Diesel", "2000 m.", "Mechanical", "60 kW", "Van", "Marijampole"]
     },
     {
-      "img_src": "https://autoplius-img.dgn.lt/ann_26_70886503/bmw-x3-visureigis-2007-dyzelinas.jpg",
-      "title": "BMW X3, visureigis",
-      "price": "6 900 €",
-      "date": "2007-09",
-      "kuras": "Dyzelinas",
-      "gearbox": "Automatinė",
-      "engine": "160 kW",
-      "mileage": "Trakai",
-      "city": ""
+      "id": 31233349,
+      "title": "Volkswagen Jetta Dyzelinas  2006 y. A5 TDI Trendline DSG",
+      "img": "https://img.autogidas.lt/4_16_139135915/volkswagen-jetta-a5-tdi-trendline-dsg-sedanas-2006.jpg",
+      "price": "2 222 €",
+      "attributes": ["1.9 l.", "Diesel", "2006 m.", "Automatic", "77 kW", "Sedan", "Vilnius"]
+    },
+    {
+      "id": 31173925,
+      "title": "Volkswagen Passat Dyzelinas  2006 y. B6 TDI Comfortline",
+      "img": "https://img.autogidas.lt/4_16_138070264/volkswagen-passat-b6-tdi-comfortline-universalas-2006.jpg",
+      "price": "4 200 €",
+      "attributes": [
+        "1.9 l.",
+        "Diesel",
+        "2006 m.",
+        "Mechanical",
+        "77 kW",
+        "208 000 km.",
+        "Wagon",
+        "Telsiai"
+      ]
+    },
+    {
+      "id": 31283107,
+      "title": "Dodge Grand Caravan Benzinas  2008 y. Vienatūris",
+      "img": "https://img.autogidas.lt/4_16_139861801/dodge-grand-caravan-vienaturis-2008.jpg",
+      "price": "4 999 €",
+      "attributes": ["3.8 l.", "Gasoline", "2008 m.", "Automatic", "Van", "Mazeikiai"]
+    },
+    {
+      "id": 31253083,
+      "title": "Audi A4 Dyzelinas  2011 y. B8",
+      "img": "https://img.autogidas.lt/4_16_139477573/audi-a4-b8-universalas-2011.jpg",
+      "price": "8 699 €",
+      "attributes": ["2.0 l.", "Diesel", "2011 m.", "Automatic", "291 023 km.", "Wagon", "Vilnius"]
+    },
+    {
+      "id": 31284934,
+      "title": "Opel Zafira Benzinas  2000 y. A",
+      "img": "https://img.autogidas.lt/4_16_139913647/opel-zafira-a-vienaturis-2000.jpg",
+      "price": "520 €",
+      "attributes": ["1.8 l.", "Gasoline", "2000 m.", "Mechanical", "85 kW", "Van", "Vilnius"]
+    },
+    {
+      "id": 31285708,
+      "title": "Opel Astra Dyzelinas  1999 y. I DI",
+      "img": "https://img.autogidas.lt/4_16_139920592/opel-astra-i-di-hecbekas-1999.jpg",
+      "price": "550 €",
+      "attributes": ["2.0 l.", "Diesel", "1999 m.", "Mechanical", "60 kW", "Hatchback", "Vilnius"]
+    },
+    {
+      "id": 31283938,
+      "title": "Volkswagen Fox Benzinas  2005 y. Hečbekas",
+      "img": "https://img.autogidas.lt/4_16_139904152/volkswagen-fox-hecbekas-2005.jpg",
+      "price": "600 €",
+      "attributes": [
+        "1.2 l.",
+        "Gasoline",
+        "2005 m.",
+        "Mechanical",
+        "120 000 km.",
+        "Hatchback",
+        "Vilnius"
+      ]
+    },
+    {
+      "id": 31283890,
+      "title": "Renault Megane Dyzelinas  2004 y. II",
+      "img": "https://img.autogidas.lt/4_16_139903912/renault-megane-ii-hecbekas-2004.jpg",
+      "price": "750 €",
+      "attributes": ["1.9 l.", "Diesel", "2004 m.", "Mechanical", "88 kW", "Hatchback", "Vilnius"]
+    },
+    {
+      "id": 31285003,
+      "title": "Mercedes-Benz A 170 Dyzelinas  2002 y. W168",
+      "img": "https://img.autogidas.lt/4_16_139914319/mercedes-benz-a-170-w168-hecbekas-2002.jpg",
+      "price": "750 €",
+      "attributes": ["1.7 l.", "Diesel", "2002 m.", "Mechanical", "Hatchback", "Vilnius"]
+    },
+    {
+      "id": 31285231,
+      "title": "Audi A4 Benzinas  2000 y. B5 Quattro",
+      "img": "https://img.autogidas.lt/4_16_139916236/audi-a4-b5-quattro-universalas-2000.jpg",
+      "price": "850 €",
+      "attributes": ["1.8 l.", "Gasoline", "2000 m.", "Mechanical", "110 kW", "Wagon", "Siauliai"]
+    },
+    {
+      "id": 31283893,
+      "title": "Peugeot 307 Dyzelinas  2002 y. I",
+      "img": "https://img.autogidas.lt/4_16_139904095/peugeot-307-i-universalas-2002.jpg",
+      "price": "1 250 €",
+      "attributes": ["2.0 l.", "Diesel", "2002 m.", "Mechanical", "79 kW", "Wagon", "Kaunas"]
+    },
+    {
+      "id": 31199584,
+      "title": "Renault Scenic Benzinas/Dujos  2002 y. I 16V Expression",
+      "img": "https://img.autogidas.lt/4_16_138447337/renault-scenic-i-16v-expression-vienaturis-2002.jpg",
+      "price": "1 299 €",
+      "attributes": [
+        "1.8 l.",
+        "Petrol / Gas",
+        "2002 m.",
+        "Mechanical",
+        "85 kW",
+        "147 689 km.",
+        "Van",
+        "Vilnius"
+      ]
+    },
+    {
+      "id": 31284820,
+      "title": "Opel Vectra Dyzelinas  2004 y. C",
+      "img": "https://img.autogidas.lt/4_16_139912621/opel-vectra-c-universalas-2004.jpg",
+      "price": "1 350 €",
+      "attributes": [
+        "2.0 l.",
+        "Diesel",
+        "2004 m.",
+        "Mechanical",
+        "74 kW",
+        "290 000 km.",
+        "Wagon",
+        "Vilnius"
+      ]
+    },
+    {
+      "id": 31285192,
+      "title": "Opel Meriva Dyzelinas  2004 y. I",
+      "img": "https://img.autogidas.lt/4_16_139915894/opel-meriva-i-vienaturis-2004.jpg",
+      "price": "1 490 €",
+      "attributes": [
+        "1.7 l.",
+        "Diesel",
+        "2004 m.",
+        "Mechanical",
+        "74 kW",
+        "198 583 km.",
+        "Van",
+        "Radviliskis"
+      ]
+    },
+    {
+      "id": 31284013,
+      "title": "Nissan X-Trail Dyzelinas  2003 y. I",
+      "img": "https://img.autogidas.lt/4_16_139905013/nissan-x-trail-i-visureigis-2003.jpg",
+      "price": "1 550 €",
+      "attributes": ["2.2 l.", "Diesel", "2003 m.", "Mechanical", "84 kW", "SUV", "Kaunas"]
+    }
+  ],
+  "autoplius": [
+    {
+      "id": 7853039,
+      "title": "Citroen C5, 2.2 l., wagon",
+      "img": "https://autoplius-img.dgn.lt/ann_26_72648019/citroen-c5-2-2-l-wagon-2006-diesel.jpg",
+      "price": "1 699 €",
+      "attributes": ["2006", "Diesel", "Manual", "125 kW", "Kaunas"]
+    },
+    {
+      "id": 7831205,
+      "title": "Hyundai Terracan, 2.9 l., suv / off-road",
+      "img": "https://autoplius-img.dgn.lt/ann_26_72396409/hyundai-terracan-2-9-l-suv-off-road-2005-diesel.jpg",
+      "price": "2 600 €",
+      "attributes": ["2005", "Diesel", "Automatic", "120 kW", "Kaunas"]
+    },
+    {
+      "id": 7831211,
+      "title": "Volkswagen Transporter, 2.5 l., mpv / minivan",
+      "img": "https://autoplius-img.dgn.lt/ann_26_72396459/volkswagen-transporter-2-5-l-mpv-minivan-2008-diesel.jpg",
+      "price": "4 150 €",
+      "attributes": ["2008", "Diesel", "Manual", "96 kW", "Kaunas"]
+    },
+    {
+      "id": 7815771,
+      "title": "Mercedes-Benz E200, 2.2 l., wagon",
+      "img": "https://autoplius-img.dgn.lt/ann_26_72209379/mercedes-benz-e200-2-2-l-wagon-2009-diesel.jpg",
+      "price": "4 850 €",
+      "attributes": ["2009", "Diesel", "Automatic", "100 kW", "Kaunas"]
+    },
+    {
+      "id": 7963477,
+      "title": "BMW 525, 2.5 l., wagon",
+      "img": "https://autoplius-img.dgn.lt/ann_26_73904453/bmw-525-2-5-l-wagon-2006-diesel.jpg",
+      "price": "5 300 € / export:  5500.00 €",
+      "attributes": ["2006-10", "Diesel", "Automatic", "120 kW", "231 358 km", "Raseiniai"]
+    },
+    {
+      "id": 4273862,
+      "title": "BMW 530 Gran Turismo, hatchback",
+      "img": "https://autoplius-img.dgn.lt/ann_26_61078431/bmw-530-gran-turismo-hatchback-2010-diesel.jpg",
+      "price": "15 500 €",
+      "attributes": ["2010", "Diesel", "Automatic", "180 kW", "227 000 km", "Vilnius"]
+    },
+    {
+      "id": 7907375,
+      "title": "Audi A4, 1.9 l., wagon",
+      "img": "https://autoplius-img.dgn.lt/ann_26_74482917/audi-a4-1-9-l-wagon-2003-diesel.jpg",
+      "price": "2 700 €",
+      "attributes": ["2003", "Diesel", "Automatic", "96 kW", "277 109 km", "Vilnius"]
+    },
+    {
+      "id": 7800019,
+      "title": "Audi A6, 2.7 l., wagon",
+      "img": "https://autoplius-img.dgn.lt/ann_26_72023505/audi-a6-2-7-l-wagon-2005-diesel.jpg",
+      "price": "4 450 €",
+      "attributes": ["2005-06", "Diesel", "Manual", "120 kW", "290 000 km", "Kaunas"]
+    },
+    {
+      "id": 7984781,
+      "title": "Chevrolet Captiva, 2.0 l., suv / off-road",
+      "img": "https://autoplius-img.dgn.lt/ann_26_74154497/chevrolet-captiva-2-0-l-suv-off-road-2007-diesel.jpg",
+      "price": "4 999 €",
+      "attributes": ["2007-04", "Diesel", "Automatic", "110 kW", "169 000 km", "Kretinga"]
+    },
+    {
+      "id": 7536693,
+      "title": "Hyundai Santa Fe, 2.2 l., suv / off-road",
+      "img": "https://autoplius-img.dgn.lt/ann_26_68840691/hyundai-santa-fe-2-2-l-suv-off-road-2007-diesel.jpg",
+      "price": "5 600 €",
+      "attributes": ["2007", "Diesel", "Manual", "110 kW", "176 000 km", "Vilnius"]
+    },
+    {
+      "id": 8004299,
+      "title": "Volkswagen Passat, 2.0 l., saloon / sedan",
+      "img": "https://autoplius-img.dgn.lt/ann_26_74387675/volkswagen-passat-2-0-l-saloon-sedan-2009-diesel.jpg",
+      "price": "5 999 €",
+      "attributes": ["2009-03", "Diesel", "Automatic", "103 kW", "180 147 km", "Kaunas"]
+    },
+    {
+      "id": 7198701,
+      "title": "Mercedes-Benz GL350 BlueTEC, 3.0 l., suv / off-road",
+      "img": "https://autoplius-img.dgn.lt/ann_26_73087387/mercedes-benz-gl350-bluetec-3-0-l-suv-off-road-2012-diesel.jpg",
+      "price": "29 900 € / export:  29900.00 €",
+      "attributes": ["2012-07", "Diesel", "Automatic", "154 kW", "84 000 km", "Vilnius"]
+    },
+    {
+      "id": 8009619,
+      "title": "Audi A4, 2.0 l., wagon",
+      "img": "https://autoplius-img.dgn.lt/ann_26_74450235/audi-a4-2-0-l-wagon-2003-petrol.jpg",
+      "price": "3 150 €",
+      "attributes": ["2003-06", "Petrol", "Manual", "110 kW", "224 846 km", "Vilnius"]
+    },
+    {
+      "id": 8004479,
+      "title": "Toyota Corolla Verso, 2.0 l., mpv / minivan",
+      "img": "https://autoplius-img.dgn.lt/ann_26_74390095/toyota-corolla-verso-2-0-l-mpv-minivan-2006-diesel.jpg",
+      "price": "3 800 €",
+      "attributes": ["2006-05", "Diesel", "Manual", "85 kW", "220 142 km", "Kaunas"]
+    },
+    {
+      "id": 7560469,
+      "title": "Suzuki Swift, 1.3 l., hatchback",
+      "img": "https://autoplius-img.dgn.lt/ann_26_69131433/suzuki-swift-1-3-l-hatchback-2011-diesel.jpg",
+      "price": "4 290 €",
+      "attributes": ["2011-02", "Diesel", "Manual", "55 kW", "112 878 km", "Jonava"]
+    },
+    {
+      "id": 7834495,
+      "title": "Toyota Corolla, 1.4 l., saloon / sedan",
+      "img": "https://autoplius-img.dgn.lt/ann_26_72445135/toyota-corolla-1-4-l-saloon-sedan-2007-petrol.jpg",
+      "price": "4 999 € + taxes / export:  4999.00 €",
+      "attributes": ["2007-07", "Petrol", "Manual", "106 000 km", "Kaunas"]
+    },
+    {
+      "id": 7949409,
+      "title": "Hyundai Santa Fe, 2.2 l., suv / off-road",
+      "img": "https://autoplius-img.dgn.lt/ann_26_73735729/hyundai-santa-fe-2-2-l-suv-off-road-2008-diesel.jpg",
+      "price": "5 400 €",
+      "attributes": ["2008-03", "Diesel", "Manual", "110 kW", "162 142 km", "Kaunas"]
+    },
+    {
+      "id": 8015603,
+      "title": "BMW 530, 3.0 l., saloon / sedan",
+      "img": "https://autoplius-img.dgn.lt/ann_26_74521845/bmw-530-3-0-l-saloon-sedan-2004-diesel.jpg",
+      "price": "5 850 €",
+      "attributes": ["2004-03", "Diesel", "Automatic", "160 kW", "235 147 km", "Kaunas"]
+    },
+    {
+      "id": 7944347,
+      "title": "Mercedes-Benz E320, 3.2 l., saloon / sedan",
+      "img": "https://autoplius-img.dgn.lt/ann_26_73678543/mercedes-benz-e320-3-2-l-saloon-sedan-2007-diesel.jpg",
+      "price": "6 200 €",
+      "attributes": ["2007-03", "Diesel", "Automatic", "165 kW", "257 148 km", "Kaunas"]
+    },
+    {
+      "id": 7939111,
+      "title": "Audi A4, 2.0 l., wagon",
+      "img": "https://autoplius-img.dgn.lt/ann_26_73619191/audi-a4-2-0-l-wagon-2009-petrol.jpg",
+      "price": "7 600 €",
+      "attributes": ["2009", "Petrol", "Manual", "155 kW", "Ukmergė"]
     }
   ]
 }
