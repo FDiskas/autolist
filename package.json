@@ -1,96 +1,40 @@
 {
-  "name": "frontend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "autolist",
+  "private": true,
+  "version": "0.0.0-development",
+  "description": "autolist",
+  "license": "MIT",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
-    "start": "concurrently npm:start:*",
-    "start:dev": "rimraf .cache dist && parcel src/index.html --open",
-    "start:server": "json-server data/demo.json --port 4321 --watch",
-    "build": "rimraf dist && parcel build src/index.html --no-cache --no-source-maps --detailed-report",
-    "precommit": "lint-staged",
-    "postinstall": "flow-typed install"
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "pretest": "npm run lint:css && npm run lint && tsc --noEmit",
+    "test": "stencil test --spec --e2e",
+    "posttest": "npm run format",
+    "test.watch": "stencil test --spec --e2e --watch",
+    "lint": "eslint src --cache --fix --ext .tsx",
+    "format": "prettier --write \"**/*.{ts,tsx,scss,md}\"",
+    "lint:css": "stylelint 'src/**/*.scss'"
+  },
+  "dependencies": {
+    "@ionic/core": "^4.0.0"
+  },
+  "devDependencies": {
+    "@stencil/core": "0.17.0",
+    "eslint": "^5.16.0",
+    "prettier": "^1.17.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "typescript": "^3.2.4",
+    "typescript-eslint-parser": "^22.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/coderslt/frontend.git"
+    "url": "https://github.com/FDiskas/autolist.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/coderslt/frontend#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.jsx": [
-      "eslint --fix",
-      "git add"
-    ],
-    "src/**/*.scss": [
-      "stylelint --syntax scss",
-      "git add"
-    ]
-  },
-  "devDependencies": {
-    "@babel/core": "7.1.6",
-    "@babel/plugin-proposal-class-properties": "7.1.0",
-    "@babel/plugin-transform-react-jsx": "7.0.0",
-    "@babel/preset-flow": "7.0.0",
-    "acorn": "6.0.4",
-    "babel-eslint": "10.0.1",
-    "babel-plugin-flow-react-proptypes": "24.1.2",
-    "babel-plugin-import": "^1.11.0",
-    "babel-plugin-transform-inline-environment-variables": "0.4.3",
-    "concurrently": "4.0.1",
-    "css-module-flow": "1.0.0",
-    "csslint": "1.0.5",
-    "empty": "0.10.1",
-    "enzyme": "3.7.0",
-    "enzyme-to-json": "3.3.4",
-    "eslint": "5.12.0",
-    "eslint-config-airbnb": "17.1.0",
-    "eslint-config-prettier": "3.3.0",
-    "eslint-plugin-flowtype": "3.2.0",
-    "eslint-plugin-immutable": "1.0.0",
-    "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-jsx-a11y": "6.1.2",
-    "eslint-plugin-prettier": "3.0.1",
-    "eslint-plugin-react": "7.12.3",
-    "flow-bin": "0.89.0",
-    "flow-typed": "2.5.1",
-    "husky": "1.1.3",
-    "json-server": "0.14.0",
-    "lint-staged": "8.0.4",
-    "parcel-bundler": "1.10.3",
-    "prettier": "1.15.2",
-    "rimraf": "2.6.2",
-    "sass": "1.15.1",
-    "stylelint": "9.8.0",
-    "stylelint-config-recommended": "2.1.0"
-  },
-  "dependencies": {
-    "bulma": "^0.7.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-router-dom": "^4.3.1",
-    "react-router4-with-layouts": "^1.3.1"
-  },
-  "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
+  "publishConfig": {
+    "access": "restricted"
   }
 }

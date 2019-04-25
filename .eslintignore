@@ -1,13 +1,1 @@
-.idea
-.vscode
-/node_modules
-/dist
-/.cache
-*.html
-*.css
-*.scss
-*.json
-*.snap
-*.png
-*.jpg
-*.svg
+node_modules/
