@@ -7,7 +7,6 @@
    > Restart PC or logout / login
 1. Create empty direcotry
 1. Open your terminal and navigate to that directory
-1. then execute command `git clone git@bitbucket.org:coderslt/frontend.git`
-   > You can use ssh version if you don't want to login each time `git clone ssh://git@bitbucket.org/coderslt/frontend.git`
+1. then execute command `git clone git@github.com:FDiskas/autolist.git`coderslt/frontend.git`
 1. Execute command `npm ci`
 1. Execute command `npm start`
