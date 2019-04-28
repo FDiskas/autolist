@@ -24,9 +24,9 @@
     "test": "stencil test --spec --e2e",
     "posttest": "npm run format",
     "test.watch": "stencil test --spec --e2e --watch",
-    "lint": "eslint src --cache --fix --ext .tsx",
+    "lint": "eslint . --cache --fix --ext .tsx && npm run lint:css",
     "format": "prettier --write \"**/*.{ts,tsx,scss,md}\"",
-    "lint:css": "stylelint 'src/**/*.scss'"
+    "lint:css": "stylelint '**/*.scss'"
   },
   "dependencies": {
     "@ionic/core": "4.2.0",
@@ -36,6 +36,8 @@
   "devDependencies": {
     "@stencil/sass": "^0.1.1",
     "eslint": "^5.16.0",
+    "husky": "^2.1.0",
+    "lint-staged": "^8.1.5",
     "prettier": "^1.17.0",
     "serve": "^11.0.0",
     "stylelint": "^10.0.1",
@@ -43,5 +45,24 @@
     "typescript": "^3.2.4",
     "typescript-eslint-parser": "^22.0.0",
     "workbox-build": "3.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,scss,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.tsx": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "git add"
+    ]
   }
 }
