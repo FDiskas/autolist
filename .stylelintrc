@@ -1,7 +1,7 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "custom-elements": true,
+    "selector-type-no-unknown": [true, { "ignore": ["custom-elements"] }],
     "at-rule-no-unknown": [
       true,
       {

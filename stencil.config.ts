@@ -3,7 +3,7 @@ import { sass } from "@stencil/sass";
 
 export const config: Config = {
   namespace: "autolist",
-  enableCache: false,
+  enableCache: true,
   globalScript: "src/global/app.ts",
   globalStyle: "src/global/app.scss",
   outputTargets: [
@@ -23,6 +23,6 @@ export const config: Config = {
     })
   ],
   devServer: {
-    openBrowser: false
+    openBrowser: true
   }
 };
