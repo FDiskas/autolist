@@ -6,6 +6,7 @@ node_modules/
 .env
 coverage/
 *.scss.d.ts
+src/components.d.ts
 
 *~
 *.sw[mnpcod]
