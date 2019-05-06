@@ -26,7 +26,7 @@
     "test.watch": "stencil test --spec --e2e --watch",
     "lint": "eslint . --cache --fix --ext .tsx && npm run lint:css",
     "format": "prettier --write \"**/*.{ts,tsx,scss,md}\"",
-    "lint:css": "stylelint '**/*.scss'"
+    "lint:css": "stylelint '**/*.scss' --fix"
   },
   "dependencies": {
     "@ionic/core": "4.2.0",

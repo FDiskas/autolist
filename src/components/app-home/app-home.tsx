@@ -22,6 +22,54 @@ export class AppHome {
           <a href="https://stenciljs.com">stenciljs.com</a> to get started.
         </p>
 
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="ion-text-start">
+                <h3>text-start</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+                vehicula lorem.
+              </div>
+            </ion-col>
+            <ion-col>
+              <div class="ion-text-end">
+                <h3>text-end</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+                vehicula lorem.
+              </div>
+            </ion-col>
+            <ion-col>
+              <div class="ion-text-center">
+                <h3>text-center</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+                vehicula lorem.
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="ion-text-justify">
+                <h3>text-justify</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+                vehicula lorem.
+              </div>
+            </ion-col>
+            <ion-col>
+              <div class="ion-text-wrap">
+                <h3>text-wrap</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+                vehicula lorem.
+              </div>
+            </ion-col>
+            <ion-col>
+              <div class="ion-text-nowrap">
+                <h3>text-nowrap</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
         <ion-button href="/profile/ionic" expand="block">
           Profile page
         </ion-button>
