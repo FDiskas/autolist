@@ -1,6 +1,11 @@
 dist/
 !www/favicon.ico
 www/
+node_modules/
+.stencil/
+.env
+coverage/
+*.scss.d.ts
 
 *~
 *.sw[mnpcod]
@@ -8,22 +13,32 @@ www/
 *.lock
 *.tmp
 *.tmp.*
+.cache/
+.eslintcache
+.sass-cache/
 log.txt
+
 *.sublime-project
 *.sublime-workspace
 
-.stencil/
 .idea/
-.vscode/
-.sass-cache/
-.versions/
-node_modules/
-$RECYCLE.BIN/
+!.idea/**/vcs.xml
+!.idea/**/encodings.xml
+!.idea/**/codeStyleSettings.xml
+!.idea/**/dictionaries
+!.idea/**/copyrights
+!.idea/**/misc.xml
+!.idea/**/sqldialects.xml
 
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+$RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
-.env
-.eslintcache
-Changelog.md
-yarn.lock
+
+!.gitignore
