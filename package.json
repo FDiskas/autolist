@@ -29,7 +29,7 @@
     "lint:css": "stylelint '**/*.scss' --fix"
   },
   "dependencies": {
-    "@ionic/core": "4.2.0",
+    "@ionic/core": "4.2.1",
     "@stencil/core": "0.18.1-0",
     "@stencil/router": "^0.3.3"
   },
