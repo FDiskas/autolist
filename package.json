@@ -4,9 +4,6 @@
   "version": "0.0.0-development",
   "description": "autolist",
   "license": "MIT",
-  "files": [
-    "dist/"
-  ],
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
@@ -43,13 +40,14 @@
     "jest-cli": "23.6.0",
     "lint-staged": "^8.1.5",
     "prettier": "^1.17.0",
-    "puppeteer": "1.11.0",
+    "puppeteer": "1.13.0",
     "serve": "^11.0.0",
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.3.0",
     "typescript": "^3.2.4",
     "typescript-eslint-parser": "^22.0.0",
-    "workbox-build": "3.4.1"
+    "workbox-build": "3.4.1",
+    "mem": ">=4.0.0"
   },
   "husky": {
     "hooks": {
