@@ -4,9 +4,6 @@
   "version": "0.0.0-development",
   "description": "autolist",
   "license": "MIT",
-  "files": [
-    "dist/"
-  ],
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
