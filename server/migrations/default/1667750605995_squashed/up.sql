@@ -1,24 +1,23 @@
-
 CREATE TABLE
-    "public"."make" (
+    "public"."makes" (
         "id" serial NOT NULL,
         "name" text NOT NULL,
         PRIMARY KEY ("id"),
-        UNIQUE ("id")
+        UNIQUE ("id") UNIQUE ("name")
     );
+
 CREATE TABLE
-    "public"."model" (
+    "public"."models" (
         "id" serial NOT NULL,
         "make_id" integer,
         "name" text NOT NULL,
         PRIMARY KEY ("id"),
-        FOREIGN KEY ("make_id") REFERENCES "public"."make"("id") ON UPDATE
+        FOREIGN KEY ("make_id") REFERENCES "public"."makes"("id") ON UPDATE
         set null ON DELETE
-        set null, UNIQUE ("id")
+        set
+            null,
+            UNIQUE ("id")
     );
-alter table "public"."make" rename to "makes";
-
-alter table "public"."model" rename to "models";
 
 CREATE TABLE
     "public"."trims" (
@@ -33,43 +32,76 @@ CREATE TABLE
         PRIMARY KEY ("hash", "id"),
         FOREIGN KEY ("model_id") REFERENCES "public"."models"("id") ON UPDATE
         set null ON DELETE
-        set null, UNIQUE ("id")
+        set
+            null,
+            UNIQUE ("id")
     );
 
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
 CREATE TABLE
-    "public"."types" (
+    "public"."body_types" (
         "id" serial NOT NULL,
         "name" text NOT NULL,
         PRIMARY KEY ("id"),
         UNIQUE ("id")
     );
-CREATE TABLE "public"."bodies" ("id" serial NOT NULL, "trim_id" integer, "type_id" integer, "length" Numeric(3, 2), "width" Numeric(3, 2), "height" Numeric(3, 2), "doors" smallint, "seats" int2, "wheel_base" Numeric(3, 2), "front_track" Numeric(3, 2), "rear_track" Numeric(3, 2), "ground_clearance" Numeric(3, 2), "cargo_capacity" Numeric(3, 2), "max_cargo_capacity" Numeric(3, 2), "curb_weight" int2, "gross_weight" int2, "max_payload" int2, "max_towing_capacity" int2, PRIMARY KEY ("id") , FOREIGN KEY ("trim_id") REFERENCES "public"."trims"("id") ON UPDATE set null ON DELETE set null, FOREIGN KEY ("type_id") REFERENCES "public"."types"("id") ON UPDATE set null ON DELETE set null, UNIQUE ("id"));
+
+CREATE TABLE
+    "public"."bodies" (
+        "id" serial NOT NULL,
+        "trim_id" integer,
+        "body_type_id" integer,
+        "length" Numeric(3, 2),
+        "width" Numeric(3, 2),
+        "height" Numeric(3, 2),
+        "doors" smallint,
+        "seats" int2,
+        "wheel_base" Numeric(3, 2),
+        "front_track" Numeric(3, 2),
+        "rear_track" Numeric(3, 2),
+        "ground_clearance" Numeric(3, 2),
+        "cargo_capacity" Numeric(3, 2),
+        "max_cargo_capacity" Numeric(3, 2),
+        "curb_weight" int2,
+        "gross_weight" int2,
+        "max_payload" int2,
+        "max_towing_capacity" int2,
+        PRIMARY KEY ("id"),
+        FOREIGN KEY ("trim_id") REFERENCES "public"."trims"("id") ON UPDATE
+        set null ON DELETE
+        set
+            null,
+            FOREIGN KEY ("body_type_id") REFERENCES "public"."body_types"("id") ON UPDATE
+        set null ON DELETE
+        set
+            null,
+            UNIQUE ("id")
+    );
 
 CREATE TABLE
     "public"."engine_types" (
         "id" serial NOT NULL,
         "name" text NOT NULL,
         PRIMARY KEY ("id"),
-        UNIQUE ("id")
+        UNIQUE ("id") UNIQUE ("name")
     );
+
 CREATE TABLE
     "public"."fuel_types" (
         "id" serial NOT NULL,
         "name" text NOT NULL,
         PRIMARY KEY ("id"),
-        UNIQUE ("id")
+        UNIQUE ("id") UNIQUE ("name")
     );
+
 CREATE TABLE
     "public"."drive_types" (
         "id" serial NOT NULL,
         "name" text,
         PRIMARY KEY ("id"),
-        UNIQUE ("id")
+        UNIQUE ("id") UNIQUE ("name")
     );
-alter table "public"."types" rename to "body_types";
-
-alter table "public"."bodies" rename column "type_id" to "body_type_id";
 
 CREATE TABLE
     "public"."cylinder_types" (
@@ -79,6 +111,7 @@ CREATE TABLE
         UNIQUE ("id"),
         UNIQUE ("name")
     );
+
 CREATE TABLE
     "public"."transmission_types" (
         "id" serial NOT NULL,
@@ -87,6 +120,7 @@ CREATE TABLE
         UNIQUE ("id"),
         UNIQUE ("name")
     );
+
 CREATE TABLE
     "public"."cam_types" (
         "id" serial NOT NULL,
@@ -95,6 +129,7 @@ CREATE TABLE
         UNIQUE ("id"),
         UNIQUE ("name")
     );
+
 CREATE TABLE
     "public"."engines" (
         "id" serial NOT NULL,
@@ -143,6 +178,7 @@ CREATE TABLE
             null,
             UNIQUE ("id")
     );
+
 CREATE TABLE
     "public"."exterior_colors" (
         "id" serial NOT NULL,
@@ -156,6 +192,7 @@ CREATE TABLE
             null,
             UNIQUE ("id")
     );
+
 CREATE TABLE
     "public"."interior_colors" (
         "id" serial NOT NULL,

@@ -1,0 +1,1 @@
+DELETE VIEW public.online_users 
