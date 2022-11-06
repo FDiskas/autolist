@@ -8,7 +8,7 @@
     "start": "next start",
     "predev": "npm run start:backend",
     "start:backend": "docker-compose up -d --build",
-    "migrate:backend": "npx hasura migrate apply && npx hasura metadata apply",
+    "migrate:backend": "npx hasura metadata apply && npx hasura migrate apply && npx hasura metadata reload",
     "seed:backend": "npx hasura seed apply",
     "start:frontend": "npx hasura console",
     "stop:backend": "docker-compose stop",

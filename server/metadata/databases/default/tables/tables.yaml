@@ -12,3 +12,4 @@
 - "!include public_models.yaml"
 - "!include public_transmission_types.yaml"
 - "!include public_trims.yaml"
+- "!include public_users.yaml"

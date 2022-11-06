@@ -1,6 +1,10 @@
 table:
   name: models
   schema: public
+object_relationships:
+  - name: make
+    using:
+      foreign_key_constraint_on: make_id
 array_relationships:
   - name: trims
     using:
