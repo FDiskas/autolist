@@ -1,0 +1,11 @@
+table:
+  name: drive_types
+  schema: public
+array_relationships:
+  - name: engines
+    using:
+      foreign_key_constraint_on:
+        column: drive_type
+        table:
+          name: engines
+          schema: public

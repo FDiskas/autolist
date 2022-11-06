@@ -1,0 +1,11 @@
+table:
+  name: makes
+  schema: public
+array_relationships:
+  - name: models
+    using:
+      foreign_key_constraint_on:
+        column: make_id
+        table:
+          name: models
+          schema: public

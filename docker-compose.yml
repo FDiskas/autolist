@@ -1,0 +1,98 @@
+version: '3.6'
+
+services:
+  postgres:
+    image: postgres:12
+    # restart: always
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      TZ: Europe/Vilnius
+      PGTZ: Europe/Vilnius
+      POSTGRES_DB: ${POSTGRES_DB:-postgres}
+      POSTGRES_USER: ${POSTGRES_USER:-puser}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-random}
+    networks:
+      - exoframe
+
+  graphql-engine:
+    image: hasura/graphql-engine:v2.14.0.cli-migrations-v3
+    volumes:
+      - ./server/migrations:/server/migrations
+      - ./server/metadata:/server/metadata
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "postgres"
+    # restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.port=8080"
+      - "traefik.network=exoframe"
+
+      - "traefik.http.routers.backend.tls=true"
+      - "traefik.http.routers.backend.rule=Host(`api.autolist.lt`)"
+      - "traefik.http.routers.backend-web.rule=Host(`api.autolist.lt`)"
+      - "traefik.http.routers.backend.tls.certresolver=exoframeChallenge"
+      - "traefik.http.middlewares.backend-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.backend-web.entrypoints=web"
+      - "traefik.http.routers.backend-web.middlewares=exoframe-server-redirect@docker"
+      - "traefik.http.routers.backend.entrypoints=websecure"
+      - "entryPoints.web.address=:80"
+      - "entryPoints.websecure.address=:443"
+    environment:
+      TZ: Europe/Vilnius
+      PGTZ: Europe/Vilnius
+      HASURA_GRAPHQL_DATABASE_URL: "postgres://${POSTGRES_USER:-puser}:${POSTGRES_PASSWORD:-random}@postgres:5432/${POSTGRES_DB:-postgres}"
+      ## enable the console served by server
+      HASURA_GRAPHQL_ENABLE_CONSOLE: ${HASURA_GRAPHQL_ENABLE_CONSOLE:-"false"} # set to "false" to disable console
+      ## enable debugging mode. It is recommended to disable this in production
+      HASURA_GRAPHQL_DEV_MODE: ${HASURA_GRAPHQL_DEV_MODE:-"false"}
+      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
+      ## uncomment next line to set an admin secret
+      HASURA_GRAPHQL_ADMIN_SECRET: ${HASURA_GRAPHQL_ADMIN_SECRET:-"admin"}
+      HASURA_GRAPHQL_ENABLE_TELEMETRY: "false"
+      HASURA_GRAPHQL_MIGRATIONS_DIR: "./migrations"
+      HASURA_GRAPHQL_METADATA_DIR: "./metadata"
+    networks:
+      - exoframe
+
+  pgbackups:
+    container_name: backups
+    image: prodrigestivill/postgres-backup-local
+    restart: always
+    volumes:
+      - db_backups:/backups:rw
+    links:
+      - postgres
+    depends_on:
+      - postgres
+    environment:
+      TZ: Europe/Vilnius
+      PGTZ: Europe/Vilnius
+
+      POSTGRES_HOST: "postgres"
+      POSTGRES_DB: ${POSTGRES_DB:-postgres}
+      POSTGRES_USER: ${POSTGRES_USER:-puser}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-random}
+      POSTGRES_EXTRA_OPTS: "-Z9 --schema=public"
+
+      SCHEDULE: "@daily" # later @hourly
+      BACKUP_KEEP_DAYS: "7"
+      BACKUP_KEEP_WEEKS: "4"
+      BACKUP_KEEP_MONTHS: "3"
+      HEALTHCHECK_PORT: "8088"
+      POSTGRES_CLUSTER: "true"
+    networks:
+      - exoframe
+
+networks:
+  exoframe:
+    external: false
+    name: exoframe
+
+volumes:
+  db_data:
+  db_backups:

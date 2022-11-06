@@ -1,0 +1,25 @@
+table:
+  name: engines
+  schema: public
+object_relationships:
+  - name: camTypeByCamType
+    using:
+      foreign_key_constraint_on: cam_type
+  - name: cylinderTypeByCylinderType
+    using:
+      foreign_key_constraint_on: cylinder_type
+  - name: driveTypeByDriveType
+    using:
+      foreign_key_constraint_on: drive_type
+  - name: engineTypeByEngineType
+    using:
+      foreign_key_constraint_on: engine_type
+  - name: fuelTypeByFuelType
+    using:
+      foreign_key_constraint_on: fuel_type
+  - name: transmission_type
+    using:
+      foreign_key_constraint_on: transmission
+  - name: trim
+    using:
+      foreign_key_constraint_on: trim_id

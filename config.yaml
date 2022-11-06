@@ -1,0 +1,17 @@
+version: 3
+endpoint: http://localhost:8080
+
+metadata_directory: ./server/metadata
+migrations_directory: ./server/migrations
+seeds_directory: ./server/seeds
+
+api_paths:
+  graphql: v1
+  version: v1/version
+
+actions:
+  kind: synchronous
+  handler_webhook_baseurl: http://localhost:3000
+  codegen:
+    framework: typescript-express
+    output_dir: src/interfaces

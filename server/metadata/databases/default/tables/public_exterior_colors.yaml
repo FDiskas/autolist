@@ -1,0 +1,7 @@
+table:
+  name: exterior_colors
+  schema: public
+object_relationships:
+  - name: trim
+    using:
+      foreign_key_constraint_on: trim_id

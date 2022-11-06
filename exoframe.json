@@ -1,0 +1,43 @@
+{
+  "name": "autolist",
+  "restart": "on-failure:2",
+  "domain": "autolist.lt",
+  "port": "7788",
+  "project": "Auto List LT",
+  "labels": {
+    "traefik.enable": "true",
+    "traefik.port": "7788",
+    "traefik.http.routers.api.rule": "Host(`admin.autolist.lt`)",
+    "traefik.http.routers.api.service": "api@internal",
+    "traefik.tcp.routers.servertcp.entrypoints": "altvtcp",
+    "traefik.tcp.routers.servertcp.service": "servertcp",
+    "traefik.tcp.routers.servertcp.rule": "HostSNI(`*`)",
+
+    "traefik.tcp.services.servertcp.loadbalancer.server.port": "8080",
+
+    "traefik.udp.routers.serverudp.entrypoints": "altvudp",
+    "traefik.udp.routers.serverudp.service": "serverudp",
+    "traefik.udp.services.serverudp.loadbalancer.server.port": "9987",
+
+    "traefik.entryPoints.altvtcp.address": ":7788",
+    "traefik.entryPoints.altvudp.address": ":7788/udp"
+  },
+  "env": {
+    "HASURA_GRAPHQL_ENABLE_CONSOLE": "true",
+    "HASURA_GRAPHQL_ADMIN_SECRET": "",
+    "POSTGRES_PASSWORD": "@db-pass",
+    "POSTGRES_USER": "@db-user",
+    "POSTGRES_DB": "db"
+  },
+  "volumes": [
+    "./server/migrations:./migrations",
+    "./server/metadata:./metadata",
+    "./server/seeds:./seeds"
+  ],
+  "rateLimit": {
+    "average": 1,
+    "burst": 5
+  },
+  "compress": false,
+  "letsencrypt": true
+}

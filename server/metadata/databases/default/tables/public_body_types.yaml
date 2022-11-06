@@ -1,0 +1,11 @@
+table:
+  name: body_types
+  schema: public
+array_relationships:
+  - name: bodies
+    using:
+      foreign_key_constraint_on:
+        column: body_type_id
+        table:
+          name: bodies
+          schema: public

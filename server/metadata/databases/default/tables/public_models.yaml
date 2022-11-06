@@ -1,0 +1,11 @@
+table:
+  name: models
+  schema: public
+array_relationships:
+  - name: trims
+    using:
+      foreign_key_constraint_on:
+        column: model_id
+        table:
+          name: trims
+          schema: public

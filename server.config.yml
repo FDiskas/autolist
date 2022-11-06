@@ -1,0 +1,9 @@
+updateChannel: "nightly"
+letsencrypt: true
+letsencryptEmail: projektas@gmail.com
+# whether to execute docker prune for images and volumes, default "false"
+autoprune: true
+traefikArgs: ["--api=true", "--api.dashboard=true", "--api.insecure=true"]
+traefikPorts:
+  - 7788/tcp
+  - 7788/udp

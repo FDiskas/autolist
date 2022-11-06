@@ -1,0 +1,11 @@
+table:
+  name: transmission_types
+  schema: public
+array_relationships:
+  - name: engines
+    using:
+      foreign_key_constraint_on:
+        column: transmission
+        table:
+          name: engines
+          schema: public

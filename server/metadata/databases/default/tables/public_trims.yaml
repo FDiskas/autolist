@@ -1,0 +1,29 @@
+table:
+  name: trims
+  schema: public
+object_relationships:
+  - name: model
+    using:
+      foreign_key_constraint_on: model_id
+array_relationships:
+  - name: bodies
+    using:
+      foreign_key_constraint_on:
+        column: trim_id
+        table:
+          name: bodies
+          schema: public
+  - name: engines
+    using:
+      foreign_key_constraint_on:
+        column: trim_id
+        table:
+          name: engines
+          schema: public
+  - name: exterior_colors
+    using:
+      foreign_key_constraint_on:
+        column: trim_id
+        table:
+          name: exterior_colors
+          schema: public

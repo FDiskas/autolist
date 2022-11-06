@@ -1,0 +1,11 @@
+table:
+  name: cylinder_types
+  schema: public
+array_relationships:
+  - name: engines
+    using:
+      foreign_key_constraint_on:
+        column: cylinder_type
+        table:
+          name: engines
+          schema: public
